@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="tab_indicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-dR-sMi">
+                                <rect key="frame" x="0.0" y="836" width="414" height="26"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cR1-Za-2av"/>
+                                </connections>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4yl-SD-BWU" customClass="AppCollectionView" customModule="tab_indicator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="782"/>
+                                <color key="backgroundColor" red="0.1090561224" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aZV-F8-aeG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bym-dy-1Ix">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="GWO-dR-sMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Wf-kT-tVX"/>
+                            <constraint firstItem="bym-dy-1Ix" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Bo-u0-hYs"/>
+                            <constraint firstItem="GWO-dR-sMi" firstAttribute="top" secondItem="4yl-SD-BWU" secondAttribute="bottom" constant="10" id="CxZ-oj-bEz"/>
+                            <constraint firstItem="4yl-SD-BWU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RMZ-gH-CRF"/>
+                            <constraint firstItem="4yl-SD-BWU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V6u-Dj-LKk"/>
+                            <constraint firstItem="GWO-dR-sMi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="csl-dI-YWb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bym-dy-1Ix" secondAttribute="bottom" id="gHP-yJ-PgP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bym-dy-1Ix" secondAttribute="trailing" id="hIB-0c-cXA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4yl-SD-BWU" secondAttribute="trailing" id="j0j-Sr-BwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GWO-dR-sMi" secondAttribute="trailing" id="oj7-lJ-rJL"/>
+                            <constraint firstItem="bym-dy-1Ix" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="q1v-Z2-CQD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appCollectionView" destination="4yl-SD-BWU" id="zql-se-1J4"/>
+                        <outlet property="loadingActivityIndicator" destination="bym-dy-1Ix" id="N3x-37-rBz"/>
+                        <outlet property="pageControl" destination="GWO-dR-sMi" id="qae-Rc-aX9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

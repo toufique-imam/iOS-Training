@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AppCollectionViewCell" reuseIdentifier="AppCollectionViewCell" id="gTV-IL-0wX" customClass="AppCollectionViewCell" customModule="tab_indicator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="351"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="351"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.left.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-ab-1UK">
+                        <rect key="frame" x="200" y="0.5" width="100" height="99"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="4tP-Rt-S0S"/>
+                            <constraint firstAttribute="height" constant="100" id="Ve3-7E-4Qp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-fu-aZ4">
+                        <rect key="frame" x="0.0" y="112" width="500" height="37"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t5-fI-ObE">
+                        <rect key="frame" x="0.0" y="151" width="500" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mtY-PS-Vl6">
+                        <rect key="frame" x="5" y="191" width="490" height="160"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PBu-fu-aZ4" secondAttribute="trailing" id="0mL-mN-bv7"/>
+                <constraint firstItem="PBu-fu-aZ4" firstAttribute="top" secondItem="fBY-ab-1UK" secondAttribute="bottom" constant="12" id="67F-Yo-c8a"/>
+                <constraint firstAttribute="trailing" secondItem="7t5-fI-ObE" secondAttribute="trailing" id="Dc6-Yx-bXk"/>
+                <constraint firstItem="7t5-fI-ObE" firstAttribute="top" secondItem="PBu-fu-aZ4" secondAttribute="bottom" constant="2" id="HVD-A5-dgB"/>
+                <constraint firstItem="fBY-ab-1UK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R84-8b-gEG"/>
+                <constraint firstItem="7t5-fI-ObE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SdT-xm-Px0"/>
+                <constraint firstItem="mtY-PS-Vl6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="XhU-NZ-gG0"/>
+                <constraint firstAttribute="trailing" secondItem="mtY-PS-Vl6" secondAttribute="trailing" constant="5" id="YDj-bK-EHd"/>
+                <constraint firstItem="PBu-fu-aZ4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZJF-7V-j1d"/>
+                <constraint firstItem="mtY-PS-Vl6" firstAttribute="top" secondItem="7t5-fI-ObE" secondAttribute="bottom" constant="19" id="bLW-PB-W4t"/>
+                <constraint firstAttribute="bottom" secondItem="mtY-PS-Vl6" secondAttribute="bottom" id="pfp-dS-Gcb"/>
+                <constraint firstItem="fBY-ab-1UK" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rY1-m8-kbE"/>
+            </constraints>
+            <size key="customSize" width="500" height="351"/>
+            <connections>
+                <outlet property="imageViewLarge" destination="mtY-PS-Vl6" id="0Sh-Rj-OGZ"/>
+                <outlet property="imageViewLogo" destination="fBY-ab-1UK" id="PsW-Ub-7kM"/>
+                <outlet property="labelDescription" destination="7t5-fI-ObE" id="BXY-uw-a0c"/>
+                <outlet property="labelTitle" destination="PBu-fu-aZ4" id="tOI-IM-LwZ"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="59.263392857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="doc.text.image" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

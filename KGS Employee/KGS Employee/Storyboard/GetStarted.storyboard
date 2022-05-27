@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Get Started Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="GetStartedController" storyboardIdentifier="GetStartedController" id="Y6W-OH-hqX" customClass="GetStartedController" customModule="KGS_Employee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-sF-75q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="726"/>
+                            </containerView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aba-PE-WFs">
+                                <rect key="frame" x="0.0" y="770" width="414" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aba-PE-WFs" secondAttribute="height" multiplier="375:84" id="AFq-Td-RKE"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Team" image="icon_team" id="9uR-El-sSl"/>
+                                    <tabBarItem title="Sports" image="icon_sports" id="OII-Jx-woU"/>
+                                    <tabBarItem title="Projects" image="icon_projects" id="WiS-8y-AiM"/>
+                                    <tabBarItem title="Holidays" image="icon_holidays" id="m8I-QE-zvS"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aba-PE-WFs" firstAttribute="top" secondItem="UG5-sF-75q" secondAttribute="bottom" id="A7g-L3-DNB"/>
+                            <constraint firstItem="aba-PE-WFs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jpw-ty-Pfy"/>
+                            <constraint firstItem="UG5-sF-75q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Tfj-9n-RoA"/>
+                            <constraint firstItem="aba-PE-WFs" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="XlI-jX-rGL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UG5-sF-75q" secondAttribute="trailing" id="dr3-Le-BPg"/>
+                            <constraint firstItem="UG5-sF-75q" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="e5O-cr-Jd7"/>
+                            <constraint firstAttribute="trailing" secondItem="aba-PE-WFs" secondAttribute="trailing" id="gBI-oo-Ue3"/>
+                            <constraint firstItem="aba-PE-WFs" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" id="xuh-97-rmm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTabBar" destination="aba-PE-WFs" id="X43-Ds-SYL"/>
+                        <outlet property="containerView" destination="UG5-sF-75q" id="LsS-gQ-4yY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_holidays" width="24" height="23"/>
+        <image name="icon_projects" width="25" height="27.5"/>
+        <image name="icon_sports" width="25" height="25"/>
+        <image name="icon_team" width="32.5" height="23.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

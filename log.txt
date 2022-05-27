@@ -1,0 +1,24 @@
+022-05-17 14:06:10.716065+0600 frame_bound[5772:180219] The behavior of the UICollectionViewFlowLayout is not defined because:
+2022-05-17 14:06:10.716206+0600 frame_bound[5772:180219] 
+the item height must be less than the height of the UICollectionView minus the section insets top and bottom values,
+ minus the content insets top and bottom values.
+2022-05-17 14:06:10.716653+0600 frame_bound[5772:180219] 
+The relevant UICollectionViewFlowLayout instance is <UICollectionViewFlowLayout: 0x139d171e0>, 
+and it is attached to <frame_bound.WidgetCollectionView: 
+0x13b841600; baseClass = UICollectionView; frame = (0 0; 600 300); clipsToBounds = YES; autoresize = RM+BM; gestureRecognizers = <NSArray: 0x6000024859b0>; 
+layer = <CALayer: 0x600002a6d4c0>; contentOffset: {0, 0}; contentSize: {0, 0}; adjustedContentInset: {0, 0, 0, 0};
+ layout: <UICollectionViewFlowLayout: 0x139d171e0>; 
+ dataSource: <frame_bound.WidgetCollectionView: 0x13b841600; baseClass = UICollectionView; frame = (0 0; 600 300); clipsToBounds = YES;
+  autoresize = RM+BM; gestureRecognizers = <NSArray: 0x6000024859b0>; layer = <CALayer: 0x600002a6d4c0>; contentOffset: {0, 0};
+   contentSize: {0, 0}; adjustedContentInset: {0, 0, 0, 0};
+    layout: <UICollectionViewFlowLayout: 0x139d171e0>; dataSource: <frame_bound.WidgetCollectionView: 0x13b841600>>>.
+2022-05-17 14:06:10.716808+0600 frame_bound[5772:180219] 
+Make a symbolic breakpoint at UICollectionViewFlowLayoutBreakForInvalidSizes to catch this in the debugger.
+2022-05-17 14:06:10.718058+0600 frame_bound[5772:180219] 
+The behavior of the UICollectionViewFlowLayout is not defined because:
+2022-05-17 14:06:10.718192+0600 frame_bound[5772:180219] 
+the item height must be less than the height of the UICollectionView minus the section insets top and bottom values, minus the content insets top and bottom values.
+2022-05-17 14:06:10.718446+0600 frame_bound[5772:180219] 
+The relevant UICollectionViewFlowLayout instance is <UICollectionViewFlowLayout: 0x139d171e0>, and it is attached to <frame_bound.WidgetCollectionView: 0x13b841600; baseClass = UICollectionView; frame = (0 0; 390 126); clipsToBounds = YES; autoresize = RM+BM; gestureRecognizers = <NSArray: 0x6000024859b0>; layer = <CALayer: 0x600002a6d4c0>; contentOffset: {0, 0}; contentSize: {0, 0}; adjustedContentInset: {0, 0, 0, 0}; layout: <UICollectionViewFlowLayout: 0x139d171e0>; dataSource: <frame_bound.WidgetCollectionView: 0x13b841600; baseClass = UICollectionView; frame = (0 0; 390 126); clipsToBounds = YES; autoresize = RM+BM; gestureRecognizers = <NSArray: 0x6000024859b0>; layer = <CALayer: 0x600002a6d4c0>; contentOffset: {0, 0}; contentSize: {0, 0}; adjustedContentInset: {0, 0, 0, 0}; layout: <UICollectionViewFlowLayout: 0x139d171e0>; dataSource: <frame_bound.WidgetCollectionView: 0x13b841600>>>.
+2022-05-17 14:06:10.718579+0600 frame_bound[5772:180219] 
+Make a symbolic breakpoint at UICollectionViewFlowLayoutBreakForInvalidSizes to catch this in the debugger.

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFPRODISPLAY-BOLD.OTF">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFPRODISPLAY-MEDIUM.OTF">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="SettingsViewController" storyboardIdentifier="SettingsViewController" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="KGS_Employee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jCM-Yd-YbY">
+                                <rect key="frame" x="20" y="69" width="374" height="33.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7z-Yq-5CR">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                        <color key="textColor" name="TitleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed7-Ur-byt">
+                                        <rect key="frame" x="313.5" y="0.0" width="60.5" height="33.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Close">
+                                            <color key="baseForegroundColor" name="TitleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kS5-x0-gfe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-jg-bNk" customClass="SettingsCollectionView" customModule="KGS_Employee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="112.5" width="414" height="710.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B3b-pz-ShN">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="ral-gK-xSw" customClass="SettingCollectionViewCell" customModule="KGS_Employee" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jQH-eu-Upl">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SettingsHeader" id="aWH-l0-LZ1" customClass="SettingsHeaderView" customModule="KGS_Employee" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-dC-1Y9">
+                                            <rect key="frame" x="28" y="8" width="358" height="34"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
+                                            <color key="textColor" red="0.35294117647058826" green="0.35686274509803922" blue="0.42745098039215684" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="G6a-dC-1Y9" secondAttribute="bottom" id="BDe-rC-5uh"/>
+                                        <constraint firstItem="G6a-dC-1Y9" firstAttribute="top" secondItem="aWH-l0-LZ1" secondAttribute="topMargin" id="FhF-JF-zZX"/>
+                                        <constraint firstItem="G6a-dC-1Y9" firstAttribute="leading" secondItem="aWH-l0-LZ1" secondAttribute="leadingMargin" constant="20" id="VAj-sr-DYa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G6a-dC-1Y9" secondAttribute="trailing" constant="20" id="elN-bs-3oZ"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="labelHeader" destination="G6a-dC-1Y9" id="2or-F5-Q3n"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jCM-Yd-YbY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6Xr-fq-d81"/>
+                            <constraint firstItem="tVM-jg-bNk" firstAttribute="top" secondItem="jCM-Yd-YbY" secondAttribute="bottom" constant="10" id="CL0-gF-lMb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jCM-Yd-YbY" secondAttribute="trailing" constant="20" id="D3x-YS-BO8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tVM-jg-bNk" secondAttribute="trailing" id="HEL-HQ-h8G"/>
+                            <constraint firstItem="tVM-jg-bNk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="10" id="HsJ-YZ-6HV"/>
+                            <constraint firstItem="tVM-jg-bNk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QzF-PX-UUe"/>
+                            <constraint firstItem="jCM-Yd-YbY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="ovK-qa-LgS"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonClose" destination="ed7-Ur-byt" id="Krg-Z5-bxv"/>
+                        <outlet property="settingsCollectionView" destination="tVM-jg-bNk" id="cTA-cD-p8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="TitleColor">
+            <color red="0.35294117647058826" green="0.35686274509803922" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

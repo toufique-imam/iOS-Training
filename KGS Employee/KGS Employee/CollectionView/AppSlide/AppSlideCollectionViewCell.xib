@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AppSlideCollectionViewCell" reuseIdentifier="AppSlideCollectionViewCell" id="gTV-IL-0wX" customClass="AppSlideCollectionViewCell" customModule="KGS_Employee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promo_banner1" translatesAutoresizingMaskIntoConstraints="NO" id="mLt-VG-LlP">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="156"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="mLt-VG-LlP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ADs-PT-ZA0"/>
+                <constraint firstAttribute="bottom" secondItem="mLt-VG-LlP" secondAttribute="bottom" id="MJx-9L-oyX"/>
+                <constraint firstItem="mLt-VG-LlP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bhT-qR-fQr"/>
+                <constraint firstAttribute="trailing" secondItem="mLt-VG-LlP" secondAttribute="trailing" id="s0L-oH-gMe"/>
+            </constraints>
+            <size key="customSize" width="492" height="294"/>
+            <connections>
+                <outlet property="imageMain" destination="mLt-VG-LlP" id="E0b-3D-A65"/>
+            </connections>
+            <point key="canvasLocation" x="452.17391304347831" y="197.54464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="promo_banner1" width="325" height="201"/>
+    </resources>
+</document>

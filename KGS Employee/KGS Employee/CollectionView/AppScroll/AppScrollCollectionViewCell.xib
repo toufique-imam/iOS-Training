@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AppScrollCollectionViewCell" reuseIdentifier="AppScrollCollectionViewCell" id="gTV-IL-0wX" customClass="AppScrollCollectionViewCell" customModule="KGS_Employee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_pop" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-3A-OzJ">
+                        <rect key="frame" x="0.0" y="5" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UXd-3A-OzJ" secondAttribute="height" multiplier="1:1" id="zT2-WH-d9N"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-MN-xGA">
+                        <rect key="frame" x="78" y="5" width="297" height="73"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Color Pop Effects Photo Editor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y14-dm-Q5U">
+                                <rect key="frame" x="0.0" y="0.0" width="206" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recolor &amp; edit your pictures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-Fo-enD">
+                                <rect key="frame" x="0.0" y="37.5" width="176.5" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEH-sk-qrf">
+                        <rect key="frame" x="0.0" y="83" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.35294117647058826" green="0.35294117647058826" blue="0.42352941176470588" alpha="0.19663182947019867" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="v5J-YQ-rKR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8vi-MN-xGA" firstAttribute="leading" secondItem="UXd-3A-OzJ" secondAttribute="trailing" constant="10" id="2KR-d0-6Cj"/>
+                <constraint firstAttribute="bottom" secondItem="AEH-sk-qrf" secondAttribute="bottom" id="48M-6K-LOb"/>
+                <constraint firstAttribute="trailing" secondItem="AEH-sk-qrf" secondAttribute="trailing" id="Ggr-Ht-7V2"/>
+                <constraint firstItem="AEH-sk-qrf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H6n-Pf-auu"/>
+                <constraint firstAttribute="trailing" secondItem="8vi-MN-xGA" secondAttribute="trailing" id="VoD-Kz-I3u"/>
+                <constraint firstItem="AEH-sk-qrf" firstAttribute="top" secondItem="8vi-MN-xGA" secondAttribute="bottom" constant="5" id="bbC-jp-Vxi"/>
+                <constraint firstItem="AEH-sk-qrf" firstAttribute="top" secondItem="UXd-3A-OzJ" secondAttribute="bottom" constant="10" id="dxw-Ko-2gT"/>
+                <constraint firstItem="8vi-MN-xGA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="j5Z-Td-H9I"/>
+                <constraint firstItem="UXd-3A-OzJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="nou-0B-eii"/>
+                <constraint firstItem="UXd-3A-OzJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ogo-mF-1sG"/>
+            </constraints>
+            <size key="customSize" width="830" height="250"/>
+            <connections>
+                <outlet property="dummyView" destination="AEH-sk-qrf" id="kl1-AW-l9v"/>
+                <outlet property="imageLogo" destination="UXd-3A-OzJ" id="sR0-UP-Zzr"/>
+                <outlet property="labelDescription" destination="gTc-Fo-enD" id="vAs-Ql-zVS"/>
+                <outlet property="labelTitle" destination="y14-dm-Q5U" id="3BM-sK-rrU"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="94"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="color_pop" width="58" height="58"/>
+        <namedColor name="TitleColor">
+            <color red="0.35294117647058826" green="0.35686274509803922" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
